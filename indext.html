@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics & The Box Model</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Basics & The Box Model</h1>
+        <p>Understanding how CSS works and the importance of the Box Model</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#box-model">Box Model</a></li>
+            <li><a href="#styling">Basic Styling</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#cards">Card Layout</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="box-model">
+            <h2>The CSS Box Model</h2>
+            <p>Every element in web design is a rectangular box. The CSS box model describes how these boxes are sized and spaced.</p>
+            
+            <div class="container">
+                <div class="box-model-demo">
+                    <h3>Box Model Components</h3>
+                    <div class="margin-box">
+                        <span class="label">Margin</span>
+                        <div class="border-box">
+                            <span class="label">Border</span>
+                            <div class="padding-box">
+                                <span class="label">Padding</span>
+                                <div class="content-box">
+                                    <span class="label">Content</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box-model-demo">
+                    <h3>Box Model Visualization</h3>
+                    <div class="example-box">
+                        This is a box with margin, padding, and border applied.
+                    </div>
+                    <p>The total width of an element is calculated as:</p>
+                    <p class="highlight">width + padding-left + padding-right + border-left + border-right + margin-left + margin-right</p>
+                    <p>Similarly, the total height is calculated as:</p>
+                    <p class="highlight">height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="styling">
+            <h2>Basic CSS Styling</h2>
+            
+            <div class="container">
+                <div class="box-model-demo">
+                    <h3>Text Styling</h3>
+                    <p>This paragraph demonstrates basic text styling with <span class="highlight">color</span>, <span class="highlight">font-size</span>, and <span class="highlight">line-height</span> properties.</p>
+                    
+                    <h4>Font Properties Example:</h4>
+                    <div class="code-example">
+                        p {<br>
+                        &nbsp;&nbsp;font-family: 'Arial', sans-serif;<br>
+                        &nbsp;&nbsp;font-size: 16px;<br>
+                        &nbsp;&nbsp;line-height: 1.5;<br>
+                        &nbsp;&nbsp;color: #333333;<br>
+                        }
+                    </div>
+                </div>
+                
+                <div class="box-model-demo">
+                    <h3>Backgrounds & Borders</h3>
+                    <p>CSS allows you to style backgrounds and borders of elements.</p>
+                    
+                    <h4>Background Example:</h4>
+                    <div class="code-example">
+                        .element {<br>
+                        &nbsp;&nbsp;background-color: #f0f0f0;<br>
+                        &nbsp;&nbsp;border: 2px solid #3498db;<br>
+                        &nbsp;&nbsp;border-radius: 5px;<br>
+                        }
+                    </div>
+                    
+                    <h4>Box Shadow Example:</h4>
+                    <div class="code-example">
+                        .card {<br>
+                        &nbsp;&nbsp;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);<br>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="examples">
+            <h2>Practical Examples</h2>
+            
+            <div class="container">
+                <div class="box-model-demo">
+                    <h3>Buttons with Box Model</h3>
+                    <p>Buttons are a great example of the box model in action:</p>
+                    <div class="button-container">
+                        <button class="btn-primary">Default Button</button>
+                        <button class="btn-secondary">Another Button</button>
+                    </div>
+                    
+                    <div class="code-example">
+                        button {<br>
+                        &nbsp;&nbsp;padding: 12px 25px; /* Inside spacing */<br>
+                        &nbsp;&nbsp;margin: 0 10px; /* Outside spacing */<br>
+                        &nbsp;&nbsp;border: none; /* No border */<br>
+                        &nbsp;&nbsp;border-radius: 5px; /* Rounded corners */<br>
+                        }
+                    </div>
+                </div>
+                
+                <div class="box-model-demo">
+                    <h3>Spacing Elements</h3>
+                    <p>Using margin and padding to create space between elements:</p>
+                    
+                    <div class="spacing-example">
+                        <p>This element has padding inside and margin below.</p>
+                    </div>
+                    
+                    <div class="spacing-example secondary">
+                        <p>Another element with similar spacing.</p>
+                    </div>
+                    
+                    <div class="code-example">
+                        .element {<br>
+                        &nbsp;&nbsp;margin-bottom: 15px; /* Space below */<br>
+                        &nbsp;&nbsp;padding: 15px; /* Space inside */<br>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="cards">
+            <h2>Card Layout Examples</h2>
+            <p>Cards are a common UI pattern that demonstrate the box model effectively.</p>
+            
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">Card 1</div>
+                    <div class="card-body">
+                        <p>This is a card component with header, body, and footer.</p>
+                        <p>It uses padding for internal spacing and margin for separation from other elements.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn-primary">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Card 2</div>
+                    <div class="card-body">
+                        <p>Another card example showing consistent spacing.</p>
+                        <p>Notice how the border-radius creates rounded corners.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn-primary">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Card 3</div>
+                    <div class="card-body">
+                        <p>Cards are great for displaying related information in a contained format.</p>
+                        <p>The box-shadow property adds depth to the design.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn-primary">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>CSS Basics & The Box Model Assignment</p>
+        <p>Demonstrating understanding of CSS styling and the box model concept</p>
+    </footer>
+</body>
+</html>
